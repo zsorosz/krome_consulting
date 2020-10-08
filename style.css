@@ -1,6 +1,39 @@
+/**
+Theme Name: L27
+Author: Zsofia Oroszi
+**/
+
+html {
+    scroll-behavior: smooth;
+}
 body
 {
 text-align: left;
+width: 98vw;
+/* box-sizing: border-box; */
+font-family: 'Poppins', sans-serif;
+}
+.container {
+    background-color: rgb(49, 49, 49);
+    
+}
+#ttr_header {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    /* height:60px; */
+    z-index:170;
+    margin:0 auto;
+    /* border-bottom:1px solid #dadada; */
+    width:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    text-align: center; 
 }
 #ttr_sidebar
 {
@@ -9,6 +42,7 @@ border-left: 1px solid black;
 #ttr_footer
 {
 width: 100%;
+height: 10rem;
 border-top: 1px #a2a2a2 solid;
 text-align: center;
 }
@@ -17,4 +51,81 @@ text-align: center;
 font-size: 11pt;
 font-family: verdana;
 font-weight: bold;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+}
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    list-style: none;
+    margin-right: 2rem;
+}
+.menu-item a {
+    padding: 1rem;
+    text-decoration: none;
+    color: rgb(49, 49, 49);
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase; 
+}
+.menu-item a:hover {
+    color: rgb(11, 184, 184);
+}
+#logo {
+    text-decoration: none;
+    color: rgb(49, 49, 49);
+    cursor: pointer;
+}
+.wrapper {
+    width: 100vw;
+    height: 100%;
+    margin: 0 auto;
+  }
+  #banner{
+    background-size: cover;
+    width: 100vw;
+    height: 95vh;
+  }
+  #banner h1{
+      font-size: 3em;
+      margin-bottom: 10px;
+  }
+  #banner h2{
+      font-size: 1.6em;
+  }
+  #banner button{
+    background-color: #029cac;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+  }
+  .banner-msg{
+    color: white;
+    background-color: #029cac;
+    margin-top: 160px;
+    opacity: 0.8;
+  }
+.post {
+    padding: 5rem;
+    color: white;
+    height: 100vh;
+    width: 20rem;
+    width: 80vw;
+    overflow: auto;
+}
+.post-content {
+    width: 80vw;
+    height: 100vh;
+    overflow: auto;
+}
+.wp-block-image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    background-size: cover;
 }
