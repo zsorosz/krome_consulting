@@ -1,4 +1,11 @@
 <?php get_header(); ?>
+
+<section class="page-wrap">
+<div class="container">
+    <h2><?php the_title();?></h2>
+    <?php get_template_part('includes/section', 'content'); ?>
+</div>
+
 <section id="banner" class="wrapper">
     
     <div class="wrapper">
@@ -71,6 +78,7 @@
         ?>
     </div>
 </section>
+</section>
 <!-- <div id="ttr_main" class="row">
     <div id="ttr_content" class="col-lg-8 col-sm-8 col-md-8 col-xs-12">
         <div class="row">
@@ -87,5 +95,4 @@
     </div>
     <?php get_sidebar(); ?>
 </div> --> -->
-
 <?php get_footer(); ?>
