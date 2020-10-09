@@ -29,6 +29,14 @@ add_action('wp_enqueue_scripts', 'load_js');
 //////////////////////////////////////////////
 
 add_theme_support('menus');
+add_theme_support('post-thumbnails');
+add_theme_support( 'custom-logo', array(
+	'height'      => 100,
+	'width'       => 400,
+	'flex-height' => true,
+	'flex-width'  => true,
+	'header-text' => array( 'site-title', 'site-description' ),
+) );
 
 //////////////////////////////////////////////
 //Menus
@@ -37,6 +45,14 @@ add_theme_support('menus');
 register_nav_menus(
     array(
         'top-menu' => 'Top Menu Location',
-        'mobile-menu' => 'Mobile Menu Location'
+        'mobile-menu' => 'Mobile Menu Location',
+        'footer-menu' => 'Footer Menu Location'
     )
 );
+
+//////////////////////////////////////////////
+//Custom Image Sizes
+//////////////////////////////////////////////
+
+add_image_size('blog-large', 800, 400, true);
+add_image_size('blog-small', 300, 200, true);

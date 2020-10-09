@@ -2,26 +2,10 @@
 
 <section class="page-wrap">
 <div class="container">
-    <h2><?php the_title();?></h2>
+    <!-- <h2><?php //the_title();?></h2> -->
     <?php get_template_part('includes/section', 'content'); ?>
 </div>
-
-<section id="banner" class="wrapper">
-    
-    <div class="wrapper">
-        <?php 
-            $my_postid = 57;
-            $content_post = get_post($my_postid);
-            $content = $content_post->post_content;
-            $content = apply_filters('the_content', $content);
-            $content = str_replace('&nbsp;', ' ', $content);
-            echo $content;
-        ?>
-    </div>
-</section>
-
-
-<section id="about" class="post">
+<section id="about" class="container">
     <h2>
         <?php 
             $my_postid = 23;
@@ -29,7 +13,7 @@
             echo $title;
         ?>
     </h2>
-    <div>
+    <div class="container">
         <?php 
             $my_postid = 23;
             $content_post = get_post($my_postid);
@@ -79,6 +63,23 @@
     </div>
 </section>
 </section>
+
+<section id="banner" class="wrapper">
+    
+    <div class="wrapper">
+        <?php 
+            $my_postid = 57;
+            $content_post = get_post($my_postid);
+            $content = $content_post->post_content;
+            $content = apply_filters('the_content', $content);
+            $content = str_replace('&nbsp;', ' ', $content);
+            echo $content;
+        ?>
+    </div>
+</section>
+
+
+
 <!-- <div id="ttr_main" class="row">
     <div id="ttr_content" class="col-lg-8 col-sm-8 col-md-8 col-xs-12">
         <div class="row">

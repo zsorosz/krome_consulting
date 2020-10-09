@@ -10,6 +10,12 @@
     <body>  
         <header id="ttr_header">
             <div class="container">
+                <div class="logo">
+                    <?php if ( function_exists( 'the_custom_logo' ) ) {
+                        the_custom_logo();
+                    };
+                    ?>
+                </div>
                 <?php wp_nav_menu(
                     array(
                         'theme_location' => 'top-menu',

@@ -4,21 +4,33 @@ html {
 body
 {
 text-align: left;
-width: 98vw;
+width: 100vw;
 box-sizing: border-box;
 font-family: 'Poppins', sans-serif;
 }
 .page-wrap {
     /* background-color: rgb(49, 49, 49); */
-    margin-top: 5rem;
+    width: 100%;
+    /* padding-top: 5rem; */
     
 }
+.blog-wrap {
+    width: 100%;
+    padding-top: 10rem;
+    
+}
+/* .page-wrap .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+} */
 #ttr_header {
     background-color: white;
+    height: 7rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem 0;
+    padding: 1rem 0;
     z-index:150;
     margin:0 auto;
     width:100%;
@@ -45,9 +57,28 @@ font-size: 11pt;
 font-family: verdana;
 font-weight: bold;
 }
+.container {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+.container p, h2, h3 {
+    width: 100vw;
+    padding: 0 10rem;
+}
+.container h2, h3 {
+    padding-top: 8rem;
+}
+.container h2 {
+    padding: 8rem 10rem 2rem 10rem;
+}
+.read-more {
+    /* margin: 0 10rem; */
+    text-align: right;
+}
 header .container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: 100%;
 }
@@ -86,6 +117,20 @@ header .top-bar {
     color: rgb(49, 49, 49);
     cursor: pointer;
 }
+.logo {
+    margin-right: auto;
+    height: 100%;
+    max-width: 20%;
+}
+.logo a {
+    max-height: 100%;
+    max-width: 100%;
+}
+.logo a img {
+   display: block;
+   max-width: 100%;
+   max-height: 100%;
+}
 .wrapper {
     width: 100vw;
     height: 100%;
@@ -115,9 +160,10 @@ header .top-bar {
     margin-top: 160px;
     opacity: 0.8;
 }
-.post {
-    padding: 5rem;
-    color: white;
+.post p{
+    padding: 3rem 10rem;
+    /* padding: 5rem; */
+    /* color: white; */
     height: 100vh;
     width: 20rem;
     width: 80vw;
@@ -129,9 +175,35 @@ header .top-bar {
     overflow: auto;
 }
 .wp-block-image {
-    width: 100%;
+    width: 100vw;
     height: 100%;
     overflow: hidden;
     margin: 0;
     background-size: cover;
+}
+.wp-block-image img {
+    width: 100%;
+    height: 100%;
+}
+.tags {
+    margin: 1rem 10rem;
+}
+.archive-container {
+    width: 100vw;
+    padding: 0 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.blog-content {
+    /* margin: 1rem; */
+    width: 100vw;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.blog-content p, h2, h3 {
+    padding: 0;
+    width: 100%;
 }
