@@ -1,10 +1,15 @@
 <?php get_header(); ?>
-
+<div class="banner-container">
+    <?php if(has_post_thumbnail()):?>
+        <img src="<?php the_post_thumbnail_url('banner-fullwidth');?>" alt="<?php the_title();?>">
+    <?php endif;?>
+</div>
 <section class="page-wrap">
 <div class="container">
     <!-- <h2><?php //the_title();?></h2> -->
     <?php get_template_part('includes/section', 'content'); ?>
 </div>
+
 <section id="about" class="container">
     <h2>
         <?php 

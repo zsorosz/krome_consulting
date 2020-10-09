@@ -185,6 +185,17 @@ header .top-bar {
     width: 100%;
     height: 100%;
 }
+.banner-container {
+    width: 100vw;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    background-size: cover;
+}
+.banner-container img {
+    width: 100%;
+    height: 100%;
+}
 .tags {
     margin: 1rem 10rem;
 }
