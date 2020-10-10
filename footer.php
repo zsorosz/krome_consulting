@@ -1,15 +1,15 @@
-            <footer id= "ttr_footer">
-                <div class="container">
-                    <?php wp_nav_menu(
-                        array(
-                            'theme_location' => 'footer-menu',
-                            'menu_class' => 'footer-bar'
-                        )
-                    );
-                    ?>
-                </div>
-            </footer>
-        </div>
+</main>
+        <footer>
+            <section>
+                <?php wp_nav_menu(
+                    array(
+                        'theme_location' => 'footer-menu',
+                        'menu_class' => 'footer-bar'
+                    )
+                );
+                ?>
+            </section>
+        </footer>
         <?php wp_footer(); ?>
     </body>
 </html>

@@ -1,16 +1,12 @@
 <?php get_header(); ?>
-<div class="banner-container">
+<section>
     <?php if(has_post_thumbnail()):?>
         <img src="<?php the_post_thumbnail_url('banner-fullwidth');?>" alt="<?php the_title();?>">
     <?php endif;?>
-</div>
-<section class="page-wrap">
-<div class="container">
-    <!-- <h2><?php //the_title();?></h2> -->
-    <?php get_template_part('includes/section', 'content'); ?>
- </div>
+    <h1>Headline</h1>
+</section>
 
-<section id="about" class="container">
+<section id="about">
     <h2>
         <?php 
             $my_postid = 23;
@@ -18,7 +14,7 @@
             echo $title;
         ?>
     </h2>
-    <div class="container">
+    <article>
         <?php 
             $my_postid = 23;
             $content_post = get_post($my_postid);
@@ -27,17 +23,17 @@
             $content = str_replace('&nbsp;', ' ', $content);
             echo $content;
         ?>
-    </div>
+    </article>
 </section>
-<section id="services" class="container">
-<h2>
+<section id="services">
+    <h2>
         <?php 
             $my_postid = 24;
             $title = get_the_title( $my_postid );
             echo $title;
         ?>
     </h2>
-    <div>
+    <article>
         <?php 
             $my_postid = 24;
             $content_post = get_post($my_postid);
@@ -46,9 +42,9 @@
             $content = str_replace('&nbsp;', ' ', $content);
             echo $content;
         ?>
-    </div>
+    </article>
 </section>
-<section id="contact" class="container">
+<section id="contact">
     <h2>
         <?php 
             $my_postid = 25;
@@ -56,7 +52,7 @@
             echo $title;
         ?>
     </h2>
-    <div>
+    <article>
         <?php 
             $my_postid = 25;
             $content_post = get_post($my_postid);
@@ -65,37 +61,30 @@
             $content = str_replace('&nbsp;', ' ', $content);
             echo $content;
         ?>
-    </div>
+    </article>
 </section>
-<section id="contact" class="container">
-    <div class="blog-wrap">
-        <div class="contact-container">
-            <?php $url = get_the_post_thumbnail_url(25, 'front-small');?>
-            
-                <img src="<?php echo $url;?>" alt="<?php the_title();?>" class="img-fluid mb-3 img-thumbnail">
-           
-            <div class="contact-content">
-                <h2>
-                    <?php 
-                        $my_postid = 25;
-                        $title = get_the_title( $my_postid );
-                        echo $title;
-                    ?>
-                </h2>
-                <div>
-                    <?php 
-                        $my_postid = 25;
-                        $content_post = get_post($my_postid);
-                        $content = $content_post->post_content;
-                        $content = apply_filters('the_content', $content);
-                        $content = str_replace('&nbsp;', ' ', $content);
-                        echo $content;
-                    ?>
-                </div>
-            </div>
-        </div>
+<section id="contact">
+    <?php $url = get_the_post_thumbnail_url(25, 'front-small');?>     
+        <img src="<?php echo $url;?>" alt="<?php the_title();?>" class="img-fluid mb-3 img-thumbnail">       
+    <div>
+        <h2>
+            <?php 
+                $my_postid = 25;
+                $title = get_the_title( $my_postid );
+                echo $title;
+            ?>
+        </h2>
+        <article>
+            <?php 
+                $my_postid = 25;
+                $content_post = get_post($my_postid);
+                $content = $content_post->post_content;
+                $content = apply_filters('the_content', $content);
+                $content = str_replace('&nbsp;', ' ', $content);
+                echo $content;
+            ?>
+        </article>
     </div>
-</section>
 </section>
 
 <!-- <div id="ttr_main" class="row">
@@ -112,6 +101,6 @@
             <?php endif; ?>
         </div>
     </div>
-    <?php get_sidebar(); ?>
-</div> --> -->
+    <?php //get_sidebar(); ?> -->
+
 <?php get_footer(); ?>

@@ -8,14 +8,14 @@
         <?php wp_head(); ?>
     </head>
     <body>  
-        <header id="ttr_header">
-            <div class="container">
-                <div class="logo">
-                    <?php if ( function_exists( 'the_custom_logo' ) ) {
-                        the_custom_logo();
-                    };
-                    ?>
-                </div>
+        <header>
+            <div class="logo">
+                <?php if ( function_exists( 'the_custom_logo' ) ) {
+                    the_custom_logo();
+                };
+                ?>
+            </div>
+            <nav>
                 <?php wp_nav_menu(
                     array(
                         'theme_location' => 'top-menu',
@@ -23,14 +23,14 @@
                     )
                 );
                 ?>
-            </div>
+            </nav>
         </header>   
         <!-- <div id="ttr_header" class="">
             <a id="logo" class="" href="<?php bloginfo('url'); ?>">
                 <h1 class="logo">L27</h1>
             </a>
             <nav class="navbar">
-                <?php wp_nav_menu(array('menu'=>'menu')); ?>
+                <?php //wp_nav_menu(array('menu'=>'menu')); ?>
             </nav>
         </div> -->
-        <div class="container">
+        <main>
