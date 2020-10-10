@@ -8,7 +8,7 @@
 <div class="container">
     <!-- <h2><?php //the_title();?></h2> -->
     <?php get_template_part('includes/section', 'content'); ?>
-</div>
+ </div>
 
 <section id="about" class="container">
     <h2>
@@ -29,7 +29,7 @@
         ?>
     </div>
 </section>
-<section id="services" class="post">
+<section id="services" class="container">
 <h2>
         <?php 
             $my_postid = 24;
@@ -48,8 +48,8 @@
         ?>
     </div>
 </section>
-<section id="contact" class="post">
-<h2>
+<section id="contact" class="container">
+    <h2>
         <?php 
             $my_postid = 25;
             $title = get_the_title( $my_postid );
@@ -67,23 +67,36 @@
         ?>
     </div>
 </section>
-</section>
-
-<section id="banner" class="wrapper">
-    
-    <div class="wrapper">
-        <?php 
-            $my_postid = 57;
-            $content_post = get_post($my_postid);
-            $content = $content_post->post_content;
-            $content = apply_filters('the_content', $content);
-            $content = str_replace('&nbsp;', ' ', $content);
-            echo $content;
-        ?>
+<section id="contact" class="container">
+    <div class="blog-wrap">
+        <div class="contact-container">
+            <?php $url = get_the_post_thumbnail_url(25, 'front-small');?>
+            
+                <img src="<?php echo $url;?>" alt="<?php the_title();?>" class="img-fluid mb-3 img-thumbnail">
+           
+            <div class="contact-content">
+                <h2>
+                    <?php 
+                        $my_postid = 25;
+                        $title = get_the_title( $my_postid );
+                        echo $title;
+                    ?>
+                </h2>
+                <div>
+                    <?php 
+                        $my_postid = 25;
+                        $content_post = get_post($my_postid);
+                        $content = $content_post->post_content;
+                        $content = apply_filters('the_content', $content);
+                        $content = str_replace('&nbsp;', ' ', $content);
+                        echo $content;
+                    ?>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
-
-
+</section>
 
 <!-- <div id="ttr_main" class="row">
     <div id="ttr_content" class="col-lg-8 col-sm-8 col-md-8 col-xs-12">
