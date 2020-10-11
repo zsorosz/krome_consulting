@@ -1,9 +1,13 @@
 <?php get_header(); ?>
-<section>
+
+<section class="hero">
     <?php if(has_post_thumbnail()):?>
-        <img src="<?php the_post_thumbnail_url('banner-fullwidth');?>" alt="<?php the_title();?>">
+        <img class="hero__img" src="<?php the_post_thumbnail_url('banner-fullwidth');?>" alt="<?php the_title();?>">
     <?php endif;?>
-    <h1>Headline</h1>
+    <div class="hero__headline">
+        <h1 class="hero__headline-title">Welcome to L27 Consulting</h1>
+        <h4 class="hero__headline-subtitle">Here comes a cool subtitle.</h4>
+    </div>
 </section>
 
 <section id="about">
