@@ -5,80 +5,66 @@
         <img class="hero__img" src="<?php the_post_thumbnail_url('banner-fullwidth');?>" alt="<?php the_title();?>">
     <?php endif;?>
     <div class="hero__headline">
-        <h1 class="hero__headline-title">Welcome to L27 Consulting</h1>
-        <h4 class="hero__headline-subtitle">Here comes a cool subtitle.</h4>
+        <h1 class="hero__headline-title"><?php 
+            $title = get_the_title();
+            echo $title;
+        ?></h1>
+        <h4 class="hero__headline-subtitle"><?php 
+            $content = get_the_content();
+            echo $content;
+        ?></h4>
     </div>
 </section>
-
-<section id="about">
-    <h2>
-        <?php 
-            $my_postid = 23;
-            $title = get_the_title( $my_postid );
-            echo $title;
-        ?>
-    </h2>
-    <article>
-        <?php 
-            $my_postid = 23;
-            $content_post = get_post($my_postid);
-            $content = $content_post->post_content;
-            $content = apply_filters('the_content', $content);
-            $content = str_replace('&nbsp;', ' ', $content);
-            echo $content;
-        ?>
-    </article>
-</section>
-<section id="services">
-    <h2>
-        <?php 
-            $my_postid = 24;
-            $title = get_the_title( $my_postid );
-            echo $title;
-        ?>
-    </h2>
-    <article>
-        <?php 
-            $my_postid = 24;
-            $content_post = get_post($my_postid);
-            $content = $content_post->post_content;
-            $content = apply_filters('the_content', $content);
-            $content = str_replace('&nbsp;', ' ', $content);
-            echo $content;
-        ?>
-    </article>
-</section>
-<section id="contact">
-    <h2>
-        <?php 
-            $my_postid = 25;
-            $title = get_the_title( $my_postid );
-            echo $title;
-        ?>
-    </h2>
-    <article>
-        <?php 
-            $my_postid = 25;
-            $content_post = get_post($my_postid);
-            $content = $content_post->post_content;
-            $content = apply_filters('the_content', $content);
-            $content = str_replace('&nbsp;', ' ', $content);
-            echo $content;
-        ?>
-    </article>
-</section>
-<section id="contact">
-    <?php $url = get_the_post_thumbnail_url(25, 'front-small');?>     
-        <img src="<?php echo $url;?>" alt="<?php the_title();?>" class="img-fluid mb-3 img-thumbnail">       
-    <div>
-        <h2>
+<section class="wrapper">
+    <section id="about" class="section section__about">
+        <!-- <h2 class="section__title">
+            <?php 
+                $my_postid = 23;
+                $title = get_the_title( $my_postid );
+                echo $title;
+            ?>
+        </h2> -->
+        <?php $url = get_the_post_thumbnail_url(23, 'front-small');?>     
+            <img src="<?php echo $url;?>" alt="<?php the_title();?>" class="img-fluid mb-3 img-thumbnail">
+        <article class="section__content section__about-content">
+            <?php 
+                $my_postid = 23;
+                $content_post = get_post($my_postid);
+                $content = $content_post->post_content;
+                $content = apply_filters('the_content', $content);
+                $content = str_replace('&nbsp;', ' ', $content);
+                echo $content;
+            ?>
+        </article>
+    </section>
+    <section id="services" class="section section__services">
+        <!-- <h2 class="section__title">
+            <?php 
+                $my_postid = 24;
+                $title = get_the_title( $my_postid );
+                echo $title;
+            ?>
+        </h2> -->
+        <article class="section__content section__services-content">
+            <?php 
+                $my_postid = 24;
+                $content_post = get_post($my_postid);
+                $content = $content_post->post_content;
+                $content = apply_filters('the_content', $content);
+                $content = str_replace('&nbsp;', ' ', $content);
+                echo $content;
+            ?>
+        </article>
+    </section>
+    <section id="contact" class="section section__contact">
+        <!-- <h2 class="section__title">
             <?php 
                 $my_postid = 25;
                 $title = get_the_title( $my_postid );
                 echo $title;
             ?>
-        </h2>
-        <article>
+        </h2> -->
+        <article class="section__content">
             <?php 
                 $my_postid = 25;
                 $content_post = get_post($my_postid);
@@ -88,7 +74,30 @@
                 echo $content;
             ?>
         </article>
-    </div>
+    </section>
+    <!-- <section id="contact" class="section section__contact">
+        <?php $url = get_the_post_thumbnail_url(25, 'front-small');?>     
+            <img src="<?php echo $url;?>" alt="<?php the_title();?>" class="img-fluid mb-3 img-thumbnail">       
+        <div>
+            <h2 class="section__title">
+                <?php 
+                    $my_postid = 25;
+                    $title = get_the_title( $my_postid );
+                    echo $title;
+                ?>
+            </h2>
+            <article class="section__content">
+                <?php 
+                    $my_postid = 25;
+                    $content_post = get_post($my_postid);
+                    $content = $content_post->post_content;
+                    $content = apply_filters('the_content', $content);
+                    $content = str_replace('&nbsp;', ' ', $content);
+                    echo $content;
+                ?>
+            </article>
+        </div>
+    </section> -->
 </section>
 
 <!-- <div id="ttr_main" class="row">

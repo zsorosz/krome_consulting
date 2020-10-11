@@ -65,7 +65,7 @@ register_nav_menus(
 add_image_size('blog-large', 800, 400, true);
 add_image_size('blog-small', 300, 200, true);
 add_image_size('front-small', 300, 300, true);
-add_image_size('banner-fullwidth', 9999, 400, false);
+add_image_size('banner-fullwidth', 9999, 9999, false);
 
 //////////////////////////////////////////////
 //Register Sidebars
