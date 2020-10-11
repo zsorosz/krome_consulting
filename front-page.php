@@ -64,7 +64,7 @@
                 echo $title;
             ?>
         </h2> -->
-        <article class="section__content">
+        <article class="section__content section__contact-content">
             <?php 
                 $my_postid = 25;
                 $content_post = get_post($my_postid);
@@ -74,6 +74,7 @@
                 echo $content;
             ?>
         </article>
+        <button type="button" class="btn btn__contact">Contact</button>
     </section>
     <!-- <section id="contact" class="section section__contact">
         <?php $url = get_the_post_thumbnail_url(25, 'front-small');?>     

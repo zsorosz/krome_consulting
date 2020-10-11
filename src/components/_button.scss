@@ -1,0 +1,13 @@
+.btn {
+    background: transparent;
+    color: $color-secondary;
+    border: 2px solid $color-secondary;
+    border-radius: 6px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    padding: 15px 40px;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: inline-block;
+    // margin: 15px 30px;
+}

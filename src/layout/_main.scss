@@ -31,7 +31,15 @@
             color: white;
             text-align: center;
         }
-    }
+    };
+    &__contact {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        h2{
+            text-align: center;
+        }
+    };
     &__about-content {
         color: $color-primary;
         margin-left: 4rem;
@@ -75,4 +83,17 @@
             }
         }
     };
+    &__contact-content {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        h2 {
+            font-family: $font-secondary;
+            width: 100%;
+            margin: 3rem;
+            font-weight: 600;
+            font-size: 2.5rem;
+            letter-spacing: 1.3;
+        };
+    }
 }
