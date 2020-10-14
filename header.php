@@ -6,6 +6,7 @@
         
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Secular+One&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
         <?php wp_head(); ?>
     </head>
     <body>  
@@ -17,16 +18,19 @@
                     };
                     ?>
                 </div>
-                <nav>
-                    <?php wp_nav_menu(
-                        array(
-                            'theme_location' => 'top-menu',
-                            'menu_class' => 'top-bar'
-                        )
-                    );
-                    ?>
-                </nav>
+                <button id="menu-icon" class="menu-icon">
+                    <svg class="lnr lnr-menu"><use xlink:href="#lnr-menu"></use></svg>
+                </button>
             </div>
+                    <nav id="menu-list" class="menu-list">
+                        <?php wp_nav_menu(
+                            array(
+                                'theme_location' => 'top-menu',
+                                'menu_class' => 'top-bar'
+                            )
+                        );
+                        ?>
+                    </nav>
         </header>   
         <!-- <div id="ttr_header" class="">
             <a id="logo" class="" href="<?php bloginfo('url'); ?>">

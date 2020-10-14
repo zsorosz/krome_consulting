@@ -9,10 +9,72 @@
 html {
     box-sizing: border-box;
     scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-size: 37.5%; //1rem - 6px
+
+    @include respond(tab-port) {
+        font-size: 50%; //1rem - 8px
+    }
+    @include respond(tab-land) {
+        font-size: 62.5%; //1rem - 10px
+    }
 }
 body {
     text-align: left;
     width: 100vw;
     font-family: $font-primary;
     color: $color-primary;
+    display: flex;
+    flex-direction: column;
 };
+h1 {
+    color: white;
+    line-height: 1;
+    padding: 2rem;
+    font-size: 7rem;
+    font-weight: 900;
+
+    // header & {
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+    // }
+
+    // &--main {
+    // font-size: 7rem;
+    // font-weight: 900;
+    // text-align: center;
+
+    // animation: moveInLeft 1s ease-out;
+
+    // @include respond(desktop) {
+    //     font-size: 10rem;
+    // }
+    // }
+
+    // &--sub {
+    // font-size: 3rem;
+    // font-weight: 300;
+
+    // animation: moveInRight 2s cubic-bezier(.68,-0.55,.74,1.76);
+    // }
+}
+
+h2 {
+    font-size: 4rem;
+    line-height: 1.2;
+    font-weight: 900;
+}
+
+p {
+    font-size: 2rem;
+    font-weight: 300;
+
+    @include respond(tab-land) {
+        font-size: 1.5rem;
+    }
+};
+img {
+    width: 100%;
+}

@@ -1,0 +1,55 @@
+/* MEDIA QUERY MANAGER
+
+/////////////////////
+//All breakpoints:
+
+mobile-s: 0;
+mobile-p: 480px;
+mobile-l: 600px;
+mobile-xl: 657px;
+tablet-p: 768px;
+tablet-l: 1024px;
+desktop-m: 1230px;
+desktop-l: 1404px;
+desktop-xl: 1920px;
+
+/////////////////////
+//Breakpoints used:
+
+0 - 768px      Phone
+768 - 1024px   Tablet portrait
+1024 - 1230px  Tablet landscape
+1230 - 1920px  Desktop
+1920px +       Big desktop
+
+/////////////////////
+//$breakpoint argument choices:
+
+-phone
+-tab-port
+-tab-land
+-desktop
+-big-desktop
+
+/////////////////////
+//Mixin usage example:
+
+  @include respond(tab-port) {
+        font-size: 50%;
+    }
+*/
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == tab-port {
+        @media only screen and (min-width: 48em) { @content }; //768px
+    }
+    @if $breakpoint == tab-land {
+        @media only screen and (min-width: 64em) { @content }; //1024px
+    }
+    @if $breakpoint == desktop {
+        @media only screen and (min-width: 76.87em) { @content }; //1230px
+    }
+    @if $breakpoint == big-desktop {
+        @media only screen and (min-width: 120em) { @content }; //1920px
+    }
+}
