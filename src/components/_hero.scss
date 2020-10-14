@@ -7,26 +7,44 @@
         height: 100%;
         object-fit: cover;
         filter: brightness(0.64);
+        animation: fadeIn 1s ease-in-out;
     };
     &__headline {
         color: white;
-        width: 100%;
         text-align: left;
         position: absolute;
-        top: 30%;
+        top: 35%;
         left: 0;
-        width: 40%;
-        margin-left: 6rem;
+        margin-left: 2rem;
     };
     &__headline-title {
         font-family: $font-secondary;
-        font-size: 5rem;
-        font-weight: 400;
-        margin-bottom: 2rem;
-        line-height: 1;
+        font-size: 7rem;
+        font-weight: 600;
+        margin-bottom: 1.2rem;
+        line-height: 1.1;
+        width: 50%;
+        @include respond(tab-port) {
+            width: 70%;
+        }
     };
-    &__headline-subtitle {
+    &__headline-subtitle p{
         font-family: $font-primary;
         font-weight: 200;
+        font-size: 2.2rem;
+        margin-left: 2.2rem;
+        width: 80%;
     }
 }
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    // 50% {
+    //   height: 50%;
+    // }
+    100% {
+      opacity: 1;
+    }
+  }

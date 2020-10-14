@@ -299,29 +299,59 @@ header {
   -o-object-fit: cover;
      object-fit: cover;
   filter: brightness(0.64);
+  -webkit-animation: fadeIn 1s ease-in-out;
+          animation: fadeIn 1s ease-in-out;
 }
 
 .hero__headline {
   color: white;
-  width: 100%;
   text-align: left;
   position: absolute;
-  top: 30%;
+  top: 35%;
   left: 0;
-  width: 40%;
-  margin-left: 6rem;
+  margin-left: 2rem;
 }
 
 .hero__headline-title {
   font-family: "Playfair Display", serif;
-  font-size: 5rem;
-  font-weight: 400;
-  margin-bottom: 2rem;
-  line-height: 1;
+  font-size: 7rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  line-height: 1.1;
+  width: 50%;
 }
 
-.hero__headline-subtitle {
+@media only screen and (min-width: 48em) {
+  .hero__headline-title {
+    width: 70%;
+  }
+}
+
+.hero__headline-subtitle p {
   font-family: "Poppins", sans-serif;
   font-weight: 200;
+  font-size: 2.2rem;
+  margin-left: 2.2rem;
+  width: 80%;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
