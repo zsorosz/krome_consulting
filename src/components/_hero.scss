@@ -16,6 +16,9 @@
         top: 35%;
         left: 0;
         margin-left: 2rem;
+        @include respond(desktop) {
+            margin-left: 6rem;
+        }
     };
     &__headline-title {
         font-family: $font-secondary;
@@ -26,6 +29,9 @@
         width: 50%;
         @include respond(tab-port) {
             width: 70%;
+        }
+        @include respond(desktop) {
+            font-size: 8rem;
         }
     };
     &__headline-subtitle p{

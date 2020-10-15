@@ -6,11 +6,12 @@
         
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Secular+One&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
         <script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
         <?php wp_head(); ?>
     </head>
     <body>  
-        <header>
+        <header class="page-header">
             <div class="navbar">
                 <div class="logo">
                     <?php if ( function_exists( 'the_custom_logo' ) ) {

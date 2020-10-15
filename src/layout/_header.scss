@@ -1,9 +1,8 @@
-header {
+.page-header {
     background-color: white;
     display: flex;
     flex-wrap: wrap;
     height: 10rem;
-    // padding: 1rem 0;
     z-index:150;
     margin:0 auto;
     width:100%;
@@ -12,9 +11,17 @@ header {
     left:0;
     right:0;
     text-align: center; 
+    transition: transform 0.4s;
     @include respond(tab-port) {
         flex-wrap: nowrap;
     }
+}
+.scroll-down .page-header {
+    transform: translate3d(0, -100%, 0);
+}
+   
+.scroll-up .page-header {
+    transform: none;
 }
 
 .menu-list {
@@ -23,7 +30,7 @@ header {
         display: flex;
         align-items: center;
         margin-left: auto;
-        margin-right: 4rem;
+        margin-right: 6rem;
     }
 }
 
@@ -73,6 +80,9 @@ header {
     margin-left: 2rem;
     max-height: 100%;
     max-width: 50%;
+    @include respond(desktop) {
+        margin-left: 6rem;
+    }
 }
 .logo a {
     max-height: 100%;
@@ -122,7 +132,7 @@ header {
         font-weight: 600;
         padding: 0;
         margin: 0;
-        font-size: 1.6rem;
+        font-size: 1.4rem;
     }
 }
 .menu-item a:hover {

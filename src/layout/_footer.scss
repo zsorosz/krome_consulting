@@ -1,6 +1,6 @@
 .footer {
     width: 100vw;
-    height: 10rem;
+    min-height: 50vh;
     background-color: $color-primary;
     color: white;
     display: flex;
@@ -14,12 +14,15 @@
         padding: 0;
         text-align: center;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+        flex-wrap: wrap;
         justify-content: space-evenly;
         align-items: center;
     };
     .menu-item a{
         color: white;
+        font-size: 1.4rem;
+        font-weight: 100;
     }
 };
 .footer-bar {
@@ -28,8 +31,14 @@
     padding: 0;
     text-align: center;
     display: flex;
+    flex-direction: column;
+    @include respond(tab-port) {
+        flex-direction: row;
+        flex-wrap: wrap;
+    };
 };
 .copyright {
-    font-size: .8rem;
+    font-size: 1.2rem;
     font-weight: 100;
+    margin-bottom: 1rem;
 }
