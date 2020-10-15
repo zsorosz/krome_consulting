@@ -54,7 +54,8 @@ register_nav_menus(
     array(
         'top-menu' => 'Top Menu Location',
         'mobile-menu' => 'Mobile Menu Location',
-        'footer-menu' => 'Footer Menu Location'
+        'footer-menu' => 'Footer Menu Location',
+        'subpage-top-menu' => 'Subpage Top Menu Location'
     )
 );
 

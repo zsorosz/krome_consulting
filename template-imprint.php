@@ -8,16 +8,13 @@ Template Name: Imprint
 
 <?php get_header(); ?>
 
-<section>
-    <h2><?php the_title();?></h2>
-    <article class="row">
-        <div class="col-lg-6">
-            Address
-        </div>
-        <div class="col-lg-6">
+<section class="wrapper">
+    <div class="section section__imprint">
+        <article class="section__content section__content-imprint">
+            <h2><?php the_title();?></h2>
             <?php get_template_part('includes/section', 'content'); ?>
-        </div>
-    </article>
+        </article>
+    </div>
 </section>
 
 <?php get_footer(); ?>

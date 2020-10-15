@@ -11,6 +11,8 @@ html {
     scroll-behavior: smooth;
     box-sizing: border-box;
     font-size: 37.5%; //1rem - 6px
+    width: 100vw;
+    overflow-x: hidden;
 
     @include respond(tab-port) {
         font-size: 50%; //1rem - 8px
@@ -26,6 +28,7 @@ body {
     color: $color-primary;
     display: flex;
     flex-direction: column;
+    max-width: 100%;
 };
 h1 {
     color: white;

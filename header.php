@@ -8,6 +8,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
         <script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
+        <script src="https://kit.fontawesome.com/15c1aef6e7.js" crossorigin="anonymous"></script>
         <?php wp_head(); ?>
     </head>
     <body>  
