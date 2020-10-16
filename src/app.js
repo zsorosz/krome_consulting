@@ -9,7 +9,7 @@ buttonElement.addEventListener('click', function (event) {
   menuElement.classList.toggle("top-bar");
 });
 
-//Toggle mobile menu after link clicked
+// Toggle mobile menu after link clicked
 
 const topbarElements = document.querySelectorAll('.top-bar .menu-item');
 var linkArr = Array.prototype.slice.call(topbarElements);

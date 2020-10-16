@@ -99,7 +99,7 @@ var buttonElement = document.getElementById('menu-icon');
 buttonElement.addEventListener('click', function (event) {
   var menuElement = document.getElementById('menu-list');
   menuElement.classList.toggle("top-bar");
-}); //Toggle mobile menu after link clicked
+}); // Toggle mobile menu after link clicked
 
 var topbarElements = document.querySelectorAll('.top-bar .menu-item');
 var linkArr = Array.prototype.slice.call(topbarElements);

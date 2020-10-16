@@ -129,10 +129,6 @@ img {
   }
 }
 
-.scroll-down .page-header {
-  transform: translate3d(0, -100%, 0);
-}
-
 .scroll-up .page-header {
   transform: none;
 }
@@ -253,7 +249,10 @@ img {
     top: 0;
     text-align: center;
     margin: 0;
+    margin-right: 6rem;
     width: 100%;
+    -webkit-animation: none;
+            animation: none;
   }
 }
 
