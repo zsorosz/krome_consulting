@@ -74,7 +74,7 @@
                 echo $content;
             ?>
         </article>
-        <button type="button" class="btn btn__contact">Contact</button>
+        <!-- <button type="button" class="btn btn__contact">Contact</button> -->
     </section>
     <!-- <section id="contact" class="section section__contact">
         <?php $url = get_the_post_thumbnail_url(25, 'front-small');?>     

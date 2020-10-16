@@ -2,7 +2,7 @@
     background-color: white;
     display: flex;
     flex-wrap: wrap;
-    height: 10rem;
+    height: 8rem;
     z-index:150;
     margin:0 auto;
     width:100%;
@@ -17,7 +17,7 @@
     }
 }
 .scroll-down .page-header {
-    // transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
 }
    
 .scroll-up .page-header {
@@ -55,6 +55,7 @@
 .lnr-menu {
     font-size: 5rem;
     color: $color-primary;
+    transition: all 0.2s;
     &:hover, :focus {
         color: $color-secondary;
     }
@@ -91,7 +92,7 @@
 .logo a img {
    display: block;
    width: auto;
-   max-height: 10rem;
+   max-height: 8rem;
    object-fit: contain;
 }
 .top-bar {
@@ -129,16 +130,17 @@
     cursor: pointer;
     font-weight: 400;
     text-transform: uppercase; 
+    transition: all 0.2s;
     @include respond(tab-port) {
         color: $color-primary;
         font-weight: 600;
         padding: 0;
         margin: 0;
         font-size: 1.4rem;
+    };
+    &:hover {
+        color: $color-secondary;
     }
-}
-.menu-item a:hover {
-    color: $color-secondary;
 }
 
 @keyframes rotateX {

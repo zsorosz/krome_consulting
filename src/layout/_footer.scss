@@ -58,7 +58,7 @@
 .fab {
     font-size: 3rem;
     margin: 0 1rem;
-    
+    transition: all .2s;
     &:hover, :focus {
         color: $color-secondary;
     }

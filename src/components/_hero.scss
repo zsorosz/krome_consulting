@@ -16,6 +16,8 @@
         top: 35%;
         left: 0;
         margin-left: 2rem;
+        // animation: slideIn 1.5s ease-out;
+        // animation-delay: 1s;
         @include respond(desktop) {
             margin-left: 6rem;
         }
@@ -27,6 +29,10 @@
         margin-bottom: 1.2rem;
         line-height: 1.1;
         width: 50%;
+        opacity: 0;
+        animation: slideIn 1.2s ease-out;
+        animation-fill-mode: forwards;
+        animation-delay: 1s;
         @include respond(tab-port) {
             width: 70%;
         }
@@ -38,8 +44,12 @@
         font-family: $font-primary;
         font-weight: 200;
         font-size: 2.2rem;
-        margin-left: 2.2rem;
+        margin-left: 2.4rem;
         width: 80%;
+        opacity: 0;
+        animation: slideIn 1s ease-out;
+        animation-fill-mode: forwards;
+        animation-delay: 2s;
     }
 }
 
@@ -51,3 +61,13 @@
       opacity: 1;
     }
 }
+@keyframes slideIn {
+    0% {
+      transform: translateY(200%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }

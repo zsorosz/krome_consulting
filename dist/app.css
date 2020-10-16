@@ -111,7 +111,7 @@ img {
   background-color: white;
   display: flex;
   flex-wrap: wrap;
-  height: 10rem;
+  height: 8rem;
   z-index: 150;
   margin: 0 auto;
   width: 100%;
@@ -127,6 +127,10 @@ img {
   .page-header {
     flex-wrap: nowrap;
   }
+}
+
+.scroll-down .page-header {
+  transform: translate3d(0, -100%, 0);
 }
 
 .scroll-up .page-header {
@@ -174,6 +178,7 @@ img {
 .lnr-menu {
   font-size: 5rem;
   color: #333333;
+  transition: all 0.2s;
 }
 
 .lnr-menu:hover,
@@ -221,7 +226,7 @@ img {
 .logo a img {
   display: block;
   width: auto;
-  max-height: 10rem;
+  max-height: 8rem;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -268,6 +273,7 @@ img {
   cursor: pointer;
   font-weight: 400;
   text-transform: uppercase;
+  transition: all 0.2s;
 }
 
 @media only screen and (min-width: 48em) {
@@ -567,6 +573,13 @@ img {
   margin-bottom: 1.2rem;
   line-height: 1.1;
   width: 50%;
+  opacity: 0;
+  -webkit-animation: slideIn 1.2s ease-out;
+          animation: slideIn 1.2s ease-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 @media only screen and (min-width: 48em) {
@@ -585,8 +598,15 @@ img {
   font-family: "Poppins", sans-serif;
   font-weight: 200;
   font-size: 2.2rem;
-  margin-left: 2.2rem;
+  margin-left: 2.4rem;
   width: 80%;
+  opacity: 0;
+  -webkit-animation: slideIn 1s ease-out;
+          animation: slideIn 1s ease-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
 }
 
 @-webkit-keyframes fadeIn {
@@ -609,24 +629,65 @@ img {
   }
 }
 
-.btn {
+@-webkit-keyframes slideIn {
+  0% {
+    transform: translateY(200%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(200%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.btn,
+.wp-block-button__link {
   background: transparent;
   color: #3e59f0;
   border: 1px solid #3e59f0;
+  border-radius: 4px;
   font-size: 3rem;
   padding: 3rem 6rem;
   text-transform: uppercase;
   cursor: pointer;
   display: inline-block;
   margin: 3rem 2rem;
+  transition: all 0.2s;
+}
+
+.btn:hover,
+.btn :focus,
+.wp-block-button__link:hover,
+.wp-block-button__link :focus {
+  color: white;
+  background-color: #3e59f0;
 }
 
 @media only screen and (min-width: 64em) {
-  .btn {
+  .btn,
+  .wp-block-button__link {
     border: 2px solid #3e59f0;
-    border-radius: 4px;
+    border-radius: 6px;
     font-size: 2rem;
+    padding: 2rem 4rem;
   }
+}
+
+.wp-block-buttons {
+  margin: 0 auto;
 }
 
 .section__content-imprint h2 {
@@ -704,6 +765,7 @@ img {
 .fab {
   font-size: 3rem;
   margin: 0 1rem;
+  transition: all 0.2s;
 }
 
 .fab:hover,
