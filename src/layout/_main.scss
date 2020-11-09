@@ -3,7 +3,6 @@
 }
 .wrapper {
     padding: 4rem;
-    // margin: 5rem 10rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -18,34 +17,27 @@
 .section {
     min-height: 100vh;
     width: 100%;
-    padding-top: 10rem;
-    margin-bottom: 10rem;
+    margin-top: 10rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    &__about {
-        @include respond(tab-port) {
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            padding-top: 12rem;
-        }
-        & img {
+    margin-bottom: 0;
+    &__about .wp-block-column {
+        img {
+            width: 100%;
             @include respond(tab-land) {
-                min-width: 40%;
+                width: 90%;
             }
-        }
-    };
-    &__about-content {
+        };
         color: $color-primary;
+        padding-top: 10rem;
         h2 {
             font-family: $font-secondary;
             margin-top: 2.5rem;
             margin-bottom: 2.5rem;
             font-weight: 700;
             font-size: 4rem;
-            // letter-spacing: 1.3;
             @include respond(tab-port) {
                 margin-top: 0;
             }
@@ -59,101 +51,73 @@
                 font-size: 1.8rem;
             }
         }
-        @include respond(tab-port) {
-            padding: 0 3rem;
-        }
     };
-    &__services {
+    &__services, &__extra {
         background-color: $color-primary;
         width: 100vw;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
     };
-    &__services-content {
+    &__services-content, &__extra-content {
+        padding-top: 10rem;
         color: white;
         text-align: center;
         display: flex;
         flex-direction: column;
-        margin: 6rem;
+        align-items: center;
+        margin: 4rem;
         @include respond(tab-port) {
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            margin: 0 6rem;
+            width: 80%;
         } 
         h2 {
             font-family: $font-secondary;
             width: 100%;
-            margin-bottom: 3.5rem;
+            margin: 6rem 0;
             font-weight: 700;
             font-size: 4.5rem;
-            // letter-spacing: 1.4;
+            letter-spacing: 1.4;
             @include respond(tab-land) {
-                margin: 4rem;
+                margin-top: 0;
                 width: 70%;
             } 
         };
-        .wp-block-group {
-            width: 100%;
-            margin: 4rem 0;
-            font-weight: 100;
+        h4 {
+            color: $color-secondary;
+            text-transform: uppercase;
+            font-size: 2.4rem;
             @include respond(tab-port) {
-                max-width: 30%;
-                margin: 7rem 0;
-            };
-            &__inner-container {
-                text-align: center;
+                font-size: 2rem;
             }
-            h4 {
-                color: $color-secondary;
-                text-transform: uppercase;
-                font-size: 2.4rem;
-                @include respond(tab-port) {
-                    font-size: 2rem;
-                }
-                @include respond(desktop) {
-                    font-size: 1.8rem;
-                }
-            }
-            p {
-                font-size: 2.4rem;
-                font-weight: 100;
-                @include respond(tab-port) {
-                    font-size: 2rem;
-                }
-                @include respond(desktop) {
-                    font-size: 1.8rem;
-                }
+            @include respond(desktop) {
+                font-size: 1.8rem;
             }
         }
+        p {
+            font-size: 2.4rem;
+            font-weight: 100;
+            @include respond(tab-port) {
+                font-size: 1.8rem;
+            }
+            @include respond(desktop) {
+                font-size: 1.6rem;
+            }
+        };
     };
     &__contact {
-        flex-direction: column;
-        height: 100vh;
         align-items: center;
-        justify-content: flex-start;
-        margin-bottom: 0;
-    };
-    
-    
+    };   
     &__contact-content {
         display: flex;
         flex-direction: column;
+        align-items: center;
         padding-top: 10rem;
-        @include respond(tab-port) {
-            padding-top: 0;;
-        }
         h2 {
             font-family: $font-secondary;
             width: 100%;
             margin-bottom: 5rem;
             font-weight: 700;
             font-size: 4.5rem;
-            // letter-spacing: 1.4;
             text-align: center;
             @include respond(tab-land) {
-                margin: 4rem;
+                margin: 4rem 0;
                 width: 70%;
             } 
             @include respond(desktop) {
@@ -161,5 +125,60 @@
                 width: 100%;
             } 
         };
+        a {
+            color: $color-primary;
+        }
+    }
+    &__extra {
+        background-color: white;
+        @include respond(desktop) {
+            padding: 0 15rem
+        }
+        
+            img {
+                width: 100%;
+                @include respond(tab-land) {
+                    width: 90%;
+                }
+            };
+    };
+    &__extra-content {
+        color: $color-primary;
+    }
+}
+.wp-block-columns {
+    display: flex;
+    flex-direction: column;
+    @include respond(tab-land) {
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 0;
+    } 
+    .wp-block-column {
+        margin-bottom: 4rem;
+        @include respond(tab-land) {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        } 
+        h4 {
+            margin-bottom: 2rem;
+            margin-top: 0;
+            @include respond(tab-land) {
+                font-size: 2rem;
+                width: 100%;
+            } 
+        }
+    }
+    img {
+        width: 40%;
+        height: auto;
+        object-fit: cover;
+        margin: 4rem auto;
+        @include respond(tab-land) {
+            margin: 0;
+            width: 50%;
+            height: auto;
+        } 
     }
 }

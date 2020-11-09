@@ -1,26 +1,27 @@
 .btn, .wp-block-button__link {
     background: transparent;
-    color: $color-secondary;
-    border: 1px solid $color-secondary;
+    color: $color-secondary !important;
+    border: 1px solid $color-secondary !important;
     border-radius: 4px;
-    font-size: 3rem;
-    padding: 3rem 6rem;
+    font-size: 2.4rem;
+    padding: 2rem 4rem;
     text-transform: uppercase;
     cursor: pointer;
     display: inline-block;
-    margin: 3rem 2rem;
+    margin: 6rem 2rem 3rem 2rem;
     transition: all 0.2s;
     &:hover, :focus {
-        color: white;
+        color: white !important;
         background-color: $color-secondary;
     }
     @include respond(tab-land) {
-        border: 2px solid $color-secondary;
-        border-radius: 6px;
-        font-size: 2rem;
-        padding: 2rem 4rem;
+        border: 1px solid $color-secondary;
+        border-radius: 4px;
+        font-size: 1.6rem;
+        padding: 1.3rem 2.6rem;
+        margin: 4rem;
     };
 }
 .wp-block-buttons {
-    margin: 0 auto;
+    // margin: 0 auto;
 }

@@ -1,12 +1,12 @@
 <?php get_header(); ?>
 
-<section class="row">
+<section class="wrapper archive">
     <!-- <aside class="col-lg-3">
         <?php //if( is_active_sidebar('blog-sidebar') ):?>
             <?php //dynamic_sidebar('blog-sidebar');?>
         <?php //endif;?>
     </aside> -->
-    <section class="col-lg-9">
+    <section class="section section__post">
 
         <!-- <h1><?php //echo single_cat_title();?></h1> -->
         
