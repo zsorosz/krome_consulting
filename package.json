@@ -18,9 +18,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/zsorosz/krome_consulting/issues"
-  },
   "homepage": "https://github.com/zsorosz/krome_consulting#readme",
   "devDependencies": {
     "cross-env": "^7.0.2",
@@ -31,6 +28,5 @@
     "vue-template-compiler": "^2.6.12"
   },
   "dependencies": {
-    "bootstrap": "^4.5.2"
   }
 }
