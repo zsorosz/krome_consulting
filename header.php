@@ -10,7 +10,7 @@
             gtag('config', 'UA-54516992-1');
         </script>
 
-        <title><?php // wp_bloginfo('name'); ?></title>
+        <title><?php //wp_bloginfo('name'); ?></title>
         <meta charset="<?php bloginfo( 'charset' ); ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" >
         
@@ -43,13 +43,5 @@
                         );
                         ?>
                     </nav>
-        </header>   
-        <!-- <div id="ttr_header" class="">
-            <a id="logo" class="" href="<?php bloginfo('url'); ?>">
-                <h1 class="logo">L27</h1>
-            </a>
-            <nav class="navbar">
-                <?php //wp_nav_menu(array('menu'=>'menu')); ?>
-            </nav>
-        </div> -->
+        </header>
         <main class="main-container">
