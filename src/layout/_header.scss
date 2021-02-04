@@ -10,7 +10,7 @@
     top:0;
     left:0;
     right:0;
-    text-align: center; 
+    text-align: center;
     transition: transform 0.4s;
     @include respond(tab-port) {
         flex-wrap: nowrap;

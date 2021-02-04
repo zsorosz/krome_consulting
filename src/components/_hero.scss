@@ -1,12 +1,12 @@
 .hero, .wp-block-cover {
-    width: 100vw;
+    // width: 100vw;
     height: 100vh;
     position: relative;
     &__headline, &__inner-container {
         color: white;
         text-align: left;
         position: absolute;
-        top: 35%;
+        top: 25%;
         left: 0;
         margin-left: 2rem;
         @include respond(desktop) {
@@ -18,7 +18,6 @@
             font-weight: 600;
             margin-bottom: 1.2rem;
             line-height: 1.1;
-            width: 50%;
             opacity: 0;
             animation: slideIn 1.2s ease-out;
             animation-fill-mode: forwards;

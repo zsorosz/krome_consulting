@@ -17,7 +17,7 @@
 .section {
     min-height: 100vh;
     width: 100%;
-    margin-top: 10rem;
+    // margin-top: 10rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -82,6 +82,7 @@
         h4 {
             color: $color-secondary;
             text-transform: uppercase;
+            text-align: center;
             font-size: 2.4rem;
             @include respond(tab-port) {
                 font-size: 2rem;
@@ -90,9 +91,18 @@
                 font-size: 1.8rem;
             }
         }
+        figure {
+            display: none;
+            height: 0;
+            @include respond(tab-port) {
+                display: block;
+                height: 100%;
+            }
+        }
         p {
             font-size: 2.4rem;
             font-weight: 100;
+            text-align: center;
             @include respond(tab-port) {
                 font-size: 1.8rem;
             }
@@ -103,12 +113,13 @@
     };
     &__contact {
         align-items: center;
+        justify-content: center;
     };   
     &__contact-content {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-top: 10rem;
+        // padding-top: 10rem;
         h2 {
             font-family: $font-secondary;
             width: 100%;
